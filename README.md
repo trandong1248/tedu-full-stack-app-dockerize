@@ -28,7 +28,7 @@ Docker containers are a flexible platform that allows you to easily build, ship 
 ## Setting up development environment 🛠
 
 
-- `git clone https://github.com/kietphamdev/full-stack-app-dockerize.git`
+- `git clone https://github.com/rickykiet83/full-stack-app-dockerize.git`
 - `cd full-stack-app`
 - `npm run install-dependencies`
 - `docker-compose up`
