@@ -4,6 +4,7 @@
   "description": "Full stack web application for Tedu",
   "main": "index.js",
   "scripts": {
+    "db:migration": "./node_modules/.bin/ts-node migrations/index.ts up",
     "server:dev": "nodemon --config nodemon.json app.ts",
     "start": "tsc && node --unhandled-rejections=strict ./dist/app.js",
     "debug": "export DEBUG=* && npm run start",
@@ -21,6 +22,7 @@
     "express-validator": "^6.11.1",
     "express-winston": "^4.1.0",
     "joi": "^17.4.0",
+    "mongo-migrate-ts": "^1.0.13",
     "mongoose": "^5.12.12",
     "winston": "^3.3.3"
   },

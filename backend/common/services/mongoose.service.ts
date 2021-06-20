@@ -5,7 +5,8 @@ const log: debug.IDebugger = debug('app:mongoose-service');
 
 class MongooseService {
   private count = 0;
-  private dbConnection: string = process.env.DB_CONNECTION_STRING || '';
+  private _dbConnection: string = process.env.DB_CONNECTION_STRING || '';
+  private _dbName: string = process.env.DB_NAME || 'tedu-courses';
 
   private mongooseOptions = {
     useNewUrlParser: true,
@@ -17,6 +18,10 @@ class MongooseService {
 
   constructor() {
     this.connectWithRetry();
+  }
+
+  get dbConnection(): string {
+    return `${this._dbConnection}/${this._dbName}`;
   }
 
   getMongoose() {
