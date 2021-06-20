@@ -10,10 +10,13 @@ services:
       - tedu-courses:/data/db
   backend:
     build: ./backend
+    depends_on:
+      - db
     ports:
       - 3000:3000
     environment:
-      DB_CONNECTION_STRING: mongodb://db/tedu-courses
+      DB_CONNECTION_STRING: mongodb://db
+      DB_NAME: tedu-courses
     volumes:
       - ./backend:/app
   frontend:

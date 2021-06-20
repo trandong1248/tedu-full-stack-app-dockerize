@@ -6,7 +6,7 @@
   "scripts": {
     "db:migration": "./node_modules/.bin/ts-node migrations/index.ts up",
     "server:dev": "nodemon --config nodemon.json app.ts",
-    "start": "tsc && node --unhandled-rejections=strict ./dist/app.js",
+    "start": "npm run db:migration && tsc && node --unhandled-rejections=strict ./dist/app.js",
     "debug": "export DEBUG=* && npm run start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -26,7 +26,7 @@ export class courses1624168366497 implements MigrationInterface {
           description: 'Docker là một nền tảng để xây dựng (build), chạy (running) và vận chuyển (shipping) các ứng dụng một cách dễ dàng và linh hoạt. Đó là lý do tại sao hầu hết các công ty sử dụng nó và đang tìm kiếm các kỹ sư phần mềm hoặc DevOps có kỹ năng Docker.',
           content: '<p>Docker là một nền tảng để xây dựng (build), chạy (running) và vận chuyển (shipping) các ứng dụng một cách dễ dàng và linh hoạt. Đó là lý do tại sao hầu hết các công ty sử dụng nó và đang tìm kiếm các kỹ sư phần mềm hoặc DevOps có kỹ năng Docker.</p> </p>Hiểu được điều đó, Tedu và giảng viên Kiệt Phạm đã mang đến cho các bạn một khóa học toàn diện và mang tính thực tiễn cao về Docker. Bạn sẽ được giới thiệu và tìm hiểu mọi thứ về Docker từ những khái niệm cơ bản cho đến nâng cao, những kiến thức cần thiết và bổ ích nhất (đã được sàng lọc qua kinh nghiệm làm dự án thực tế). Bạn sẽ cùng giảng viên xây dựng 1 dự án web full-stack, kết nối trực tiếp với cơ sở dữ liệu và các tests tự động chạy trên cloud.</p>',
           price: 2400000,
-          releasedDate: new Date('05/22/2021')
+          releasedDate: new Date('12/12/2020')
         },
       ])
       .catch(err => console.error(err));
