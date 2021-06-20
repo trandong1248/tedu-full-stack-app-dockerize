@@ -62,11 +62,10 @@ app.get('/ping', (req: express.Request, res: express.Response) => {
   res.status(200).send('pong');
 });
 
-server.listen(port, () => {
+export default server.listen(port, () => {
   routes.forEach((route: CommonRoutesConfig) => {
     debugLog(`Routes configured for ${route.getName()}`)
   });
   // logging when the server is done starting up
   console.log(runningMessage);
 });
-
