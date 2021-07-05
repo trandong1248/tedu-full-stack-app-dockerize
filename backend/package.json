@@ -8,7 +8,8 @@
     "server:dev": "nodemon --config nodemon.json app.ts",
     "start": "npm run db:migration && tsc && node --unhandled-rejections=strict ./dist/app.js",
     "debug": "export DEBUG=* && npm run start",
-    "test": "ENV_FILE=./.env.test && mocha -r ts-node/register 'tests/**/*.test.ts' --timeout 20000 --unhandled-rejections=strict --exit"
+    "test": "ENV_FILE=./.env.test && mocha -r ts-node/register 'tests/**/*.test.ts' --timeout 20000 --unhandled-rejections=strict --exit",
+    "build": "rimraf ./dist && tsc"
   },
   "keywords": [],
   "author": "Kiet Pham",
@@ -38,6 +39,7 @@
     "chai": "^4.3.4",
     "mocha": "^9.0.1",
     "nodemon": "^2.0.7",
+    "rimraf": "^3.0.2",
     "source-map-support": "^0.5.19",
     "supertest": "^6.1.3",
     "ts-node": "^10.0.0",
