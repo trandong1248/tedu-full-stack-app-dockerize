@@ -10,6 +10,7 @@ services:
     restart: unless-stopped
   backend:
     build: ./backend
+    image: tedu_courses_api:1
     depends_on:
       - db
     ports:
@@ -22,6 +23,7 @@ services:
     build:
       context: ./frontend
       dockerfile: Dockerfile.prod
+    image: tedu_courses_web:1
     ports:
       - 80:80
     restart: unless-stopped
