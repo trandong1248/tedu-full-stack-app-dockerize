@@ -1,9 +1,9 @@
+import BodyValidationMiddleware from './../common/middleware/body.validation.middleware';
 import { CommonRoutesConfig } from './../common/common.routes.config';
-import express from 'express';
 import CoursesController from './controllers/course.controller';
 import CoursesMiddleware from './middleware/courses.middleware';
-import BodyValidationMiddleware from './../common/middleware/body.validation.middleware';
 import ObjectIdValidationMiddleware from '../common/middleware/objectId.validation.middleware';
+import express from 'express';
 
 export class CoursesRoutes extends CommonRoutesConfig {
   constructor(app: express.Application) {
@@ -29,7 +29,8 @@ export class CoursesRoutes extends CommonRoutesConfig {
         CoursesMiddleware.validateCourseExists,
       ])
       .get(CoursesController.getCourseById)
-      .delete(CoursesController.removeCourse);
+      .delete(CoursesController.removeCourse)
+      ;
 
     this.app.put(`/api/courses/:id`, [
       BodyValidationMiddleware.verifyBodyFieldsErrors,

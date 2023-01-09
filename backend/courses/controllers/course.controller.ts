@@ -1,14 +1,18 @@
-import { PutCourseDto } from './../dto/put.course.dto';
-import { PatchCourseDto } from './../dto/patch.course.dto';
 import { CreateCourseDto } from './../dto/create.course.dto';
-// import express to add types to the request/response objects from our controller functions
+import { PatchCourseDto } from './../dto/patch.course.dto';
+import { PutCourseDto } from './../dto/put.course.dto';
+import coursesService from './../services/courses.service';
+import debug from 'debug';
 import express from 'express';
 
+// import express to add types to the request/response objects from our controller functions
+
+
 // import our services
-import coursesService from './../services/courses.service';
+
 
 // use debug with a custom context
-import debug from 'debug';
+
 
 const log: debug.IDebugger = debug('app:courses-controller');
 

@@ -1,14 +1,14 @@
-import { CourseDto } from '../dto/course.dto';
 import { CRUD } from '../../common/interfaces/crud.interface';
-import { CreateCourseDto } from '../dto/create.course.dto';
-import { PutCourseDto } from '../dto/put.course.dto';
-import { PatchCourseDto } from '../dto/patch.course.dto';
 import CourseDao from '../daos/courses.dao';
+import { CourseDto } from '../dto/course.dto';
+import { CreateCourseDto } from '../dto/create.course.dto';
+import { PatchCourseDto } from '../dto/patch.course.dto';
+import { PutCourseDto } from '../dto/put.course.dto';
 import debug from 'debug';
 
 const log: debug.IDebugger = debug('app:course-service');
 
-class CoursesService implements CRUD<CourseDto, CreateCourseDto, PutCourseDto, PatchCourseDto> {
+class CoursesService {
 
   async create(resource: CreateCourseDto) {
     log('creating course', resource);

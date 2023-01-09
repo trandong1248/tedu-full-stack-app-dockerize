@@ -1,6 +1,6 @@
-import express from 'express';
-import debug from 'debug';
 import coursesService from './../services/courses.service';
+import debug from 'debug';
+import express from 'express';
 
 const log: debug.IDebugger = debug('app:courses-middleware');
 

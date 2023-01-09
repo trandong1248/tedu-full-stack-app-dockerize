@@ -15,7 +15,7 @@ mongoMigrateCli({
   migrationsDir: __dirname,
   migrationsCollection: 'migrations_collection',
   options: {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
+    // useNewUrlParser: true,
+    // useUnifiedTopology: true
   }
 });

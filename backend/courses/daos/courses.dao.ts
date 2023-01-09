@@ -34,7 +34,7 @@ class CoursesDao {
     log('New instance of CoursesDao has created!');
   }
 
-  async addCourse(courseFields: CreateCourseDto) {
+  async addCourse(courseFields: CreateCourseDto): Promise<any> {
     const course = new this.Course({
       ...courseFields,
     });
@@ -42,35 +42,34 @@ class CoursesDao {
     return course;
   }
 
-  async getCourseById(courseId: string) {
-    return await this.Course.findById(courseId).populate('Course').exec();
+  async getCourseById(courseId: string): Promise<any> {
+    return await this.Course.findById(courseId);
   }
 
-  async getCourseByCode(code: string) {
-    return this.Course.findOne({ code: code }).exec();
+  async getCourseByCode(code: string): Promise<any> {
+    return this.Course.findOne({ code: code });
   }
 
   async getCourses(limit = 25, page = 0) {
     return this.Course.find()
       .limit(limit)
-      .skip(limit * page)
-      .exec();
+      .skip(limit * page).exec();
   }
 
   async updateCourseById(
     courseId: string,
-    courseFields: PatchCourseDto | PutCourseDto) {
+    courseFields: PatchCourseDto | PutCourseDto): Promise<any> {
     const existingCourse = await this.Course.findOneAndUpdate(
       { _id: courseId },
       { $set: courseFields },
       { new: true }
-    ).exec();
+    );
 
     return existingCourse;
   }
 
-  async removeCourseById(courseId: string) {
-    return this.Course.findByIdAndDelete(courseId).exec();
+  async removeCourseById(courseId: string): Promise<any> {
+    return this.Course.findByIdAndDelete(courseId);
   }
 }
 

@@ -1,6 +1,6 @@
-FROM node:14.16.1-alpine3.13
+FROM node:16-alpine3.17
 
-RUN npm install -g @angular/cli@11.2.12
+RUN npm install -g @angular/cli@15.0.0
 
 RUN addgroup app && adduser -S -G app app
 USER app

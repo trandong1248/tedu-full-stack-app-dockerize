@@ -1,5 +1,5 @@
-import mongoose from 'mongoose';
 import debug from 'debug';
+import mongoose from 'mongoose';
 
 const log: debug.IDebugger = debug('app:mongoose-service');
 
@@ -12,8 +12,7 @@ class MongooseService {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     serverSelectionTimeoutMS: 5000,
-    useFindAndModify: false,
-    useCreateIndex: true,
+    dbName: this._dbName
   }
 
   constructor() {
@@ -21,7 +20,7 @@ class MongooseService {
   }
 
   get dbConnection(): string {
-    return `${this._dbConnection}/${this._dbName}`;
+    return `${this._dbConnection}`;
   }
 
   getMongoose() {
