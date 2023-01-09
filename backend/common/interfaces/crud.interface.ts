@@ -1,6 +1,6 @@
 export interface CRUD<T, TCREATE, TUPDATE, TPATCH> {
   list: (limit: number, page: number) => Promise<T[]>;
-  create: (resource: TCREATE) => Promise<TCREATE>;
+  create: (resource: TCREATE) => Promise<T>;
   putById: (id: string, resource: TUPDATE) => Promise<TUPDATE>;
   getById: (id: string) => Promise<T | null>;
   deleteById: (id: string) => Promise<T | null>;

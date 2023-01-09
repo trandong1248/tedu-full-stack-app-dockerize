@@ -50,7 +50,7 @@ class CoursesDao {
     return this.Course.findOne({ code: code });
   }
 
-  async getCourses(limit = 25, page = 0) {
+  async getCourses(limit = 25, page = 0): Promise<any> {
     return this.Course.find()
       .limit(limit)
       .skip(limit * page).exec();

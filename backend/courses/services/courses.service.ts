@@ -1,6 +1,6 @@
 import { CRUD } from '../../common/interfaces/crud.interface';
 import CourseDao from '../daos/courses.dao';
-import { CourseDto } from '../dto/course.dto';
+import { CourseDto } from './../dto/course.dto';
 import { CreateCourseDto } from '../dto/create.course.dto';
 import { PatchCourseDto } from '../dto/patch.course.dto';
 import { PutCourseDto } from '../dto/put.course.dto';
@@ -8,7 +8,7 @@ import debug from 'debug';
 
 const log: debug.IDebugger = debug('app:course-service');
 
-class CoursesService {
+class CoursesService implements CRUD<CourseDto, CreateCourseDto, PutCourseDto, PatchCourseDto> {
 
   async create(resource: CreateCourseDto) {
     log('creating course', resource);
@@ -23,27 +23,32 @@ class CoursesService {
 
   async list(limit: number, page: number) {
     log(`list courses with limit: ${limit}, page: ${page}`);
-    return CourseDao.getCourses(limit, page);
+    var courses = await CourseDao.getCourses(limit, page);
+    return courses.map((items: CourseDto[]) => items);
   }
 
   async patchById(id: string, resource: PatchCourseDto) {
     log('patch course', resource);
-    return CourseDao.updateCourseById(id, resource);
+    var course = await CourseDao.updateCourseById(id, resource);
+    return course;
   }
 
   async getById(id: string) {
     log('read course by id', id);
-    return CourseDao.getCourseById(id);
+    var course = await CourseDao.getCourseById(id);
+    return course;
   }
 
   async putById(id: string, resource: PutCourseDto) {
     log('put course', resource);
-    return CourseDao.updateCourseById(id, resource);
+    var course = await CourseDao.updateCourseById(id, resource);
+    return course;
   }
 
   async getCourseByCode(code: string) {
     log('get course by code', code);
-    return CourseDao.getCourseByCode(code);
+    var course = await CourseDao.getCourseByCode(code);
+    return course;
   }
 }
 

@@ -12,7 +12,7 @@ class MongooseService {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     serverSelectionTimeoutMS: 5000,
-    dbName: this._dbName
+    dbName: this._dbName,
   }
 
   constructor() {
@@ -30,6 +30,7 @@ class MongooseService {
   connectWithRetry = () => {
     log('Connecting to MongoDB (will retry if needed)');
     mongoose
+      .set('strictQuery', true)
       .connect(this.dbConnection, this.mongooseOptions)
       .then(() => {
         log('MongoDB is connected');
