@@ -29,6 +29,7 @@
   "license": "MIT",
   "homepage": "https://github.com/kietphamdev/full-stack-app#readme",
   "engines": {
-    "node": "16.x"
+    "node": ">=14.19.1 <=18.x.x",
+    "npm": ">=6.0.0"
   }
 }
