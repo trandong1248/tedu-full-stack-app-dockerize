@@ -50,3 +50,12 @@ Docker containers are a flexible platform that allows you to easily build, ship 
 - `npm run test:back`
 
 Visit https://tedu.com.vn/khoa-hoc/lam-chu-docker-de-chinh-phuc-devops-42.html and signup the course to learn Docker from scratch, no previous experience required!
+
+## Recommended Courses:
+- Xây dựng hệ thống với kiến trúc Micro-service: [https://tedu.com.vn/khoa-hoc](https://tedu.com.vn/course-ref/49/C5D7O1.html)
+- Tedu Exam course (MongoDb, DDD, CQRS, Identity Server):  [https://tedu.com.vn/khoa-hoc](https://tedu.com.vn/course-ref/43/C5D7O1.html)
+- Authentication và Authorization nâng cao:  [https://tedu.com.vn/khoa-hoc](https://tedu.com.vn/course-ref/36/C5D7O1.html)
+- Xây dựng ứng dụng web với ASP.NET Core Web API + Identity Server + Angular:  [https://tedu.com.vn/khoa-hoc](https://tedu.com.vn/course-ref/35/C5D7O1.htm)
+- Phát triển Web App với .NET 6 (ABP Framework & Angular):  [https://tedu.com.vn/khoa-hoc](https://tedu.com.vn/course-ref/50/C5D7O1.html)
+- Triển khai CI/CD với Azure DevOps:  [https://tedu.com.vn/khoa-hoc](https://tedu.com.vn/course-ref/37/C5D7O1.html)
+- Thiết kế RESTful API với ASP.NET Core và Dapper ORM: [https://tedu.com.vn/khoa-hoc](https://tedu.com.vn/course-ref/24/C5D7O1.html)
